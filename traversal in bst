@@ -1,0 +1,42 @@
+void BST::preorederalTraversal(){
+    recursivePreorder(root);
+}
+
+void BST::recursivePreorder(node *root ){
+    if(root){
+        cout<<root->item<<endl;
+        recursivePreorder(root->left);
+        recursivePreorder(root->right);
+    }
+}
+
+
+
+//post order traversal
+void BST::postorederalTraversal(){
+    recursivePostorder(root);
+}
+
+void BST::recursivePostorder(node *root ){
+    if(root){
+        recursivePostorder(root->left);
+        recursivePostorder(root->right);
+        cout<<root->item<<endl;
+    }
+}
+
+
+
+
+//in order traversal
+void BST::inorederalTraversal(){
+    recursiveInorder(root);
+}
+
+void BST::recursiveInorder(node *root ){
+    if(root){
+        recursiveInorder(root->left);
+        cout<<root->item<<endl;
+        recursiveInorder(root->right);
+    }
+}
